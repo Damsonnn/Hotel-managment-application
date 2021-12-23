@@ -175,7 +175,17 @@ begin
     end if;
 end;
 /
-    
+create or replace procedure dodajUslugeDoRezerwacji
+    (vUsluga in varchar,
+    vId in number) 
+is
+    vCena number;
+begin
+    insert into uslugi_rezerwacje values(vId, vUsluga);
+    select cena into vCena from uslugi where nazwa = vUsluga; 
+    update rezerwacje set oplata = vCena + oplata;
+end;
+/ 
     
     
     
