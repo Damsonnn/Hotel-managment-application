@@ -1,3 +1,2 @@
-# Hotel-sbd2
-
-Aplikacja służąca do zarządzania hotelem.
+# Hotel managment application
+Application for hotel managment made with Oracle Apex and Oracle PL/SQL.
